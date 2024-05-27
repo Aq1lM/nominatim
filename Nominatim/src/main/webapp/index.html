@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Form Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        .option {
+            margin-bottom: 20px;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .option h2 {
+            margin-top: 0;
+        }
+        .option form {
+            display: flex;
+            flex-direction: column;
+        }
+        .option form input[type="text"],
+        .option form input[type="submit"] {
+            margin-bottom: 10px;
+            padding: 10px;
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="option">
+            <h2>Option 1: Search</h2>
+            <form action="search" method="GET">
+                <input type="text" name="address" placeholder="Enter search adress" required>
+                <input type="submit" value="Search">
+            </form>
+        </div>
+
+        <div class="option">
+            <h2>Option 2: Reverse</h2>
+            <form action="reverse" method="GET">
+                <input type="text" name="lat" placeholder="Enter lat" required>
+                <input type="text" name="lon" placeholder="Enter lon" required>
+                <input type="submit" value="Reverse">
+            </form>
+        </div>
+    </div>
+</body>
+</html>
